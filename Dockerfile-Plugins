@@ -2,3 +2,5 @@ FROM netboxcommunity/netbox:latest
 
 COPY ./plugin_requirements.txt /
 RUN /opt/netbox/venv/bin/pip install  --no-warn-script-location -r /plugin_requirements.txt
+
+COPY /opt/netbox/netbox/static/netbox_topology_views/img/server.png /opt/netbox/netbox/static/netbox_topology_views/img/role-unknown.png
